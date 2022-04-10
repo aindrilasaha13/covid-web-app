@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Options</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    .column-container {
+      font-size: 15px; 
+      text-align: justify;
+      color: #000033;
+      background-color: #99CCFF; 
+      padding: 30px;
+      height : 350px;
+      }
+    .btn {
+      background-color : #000099;
+      color : #CCFFFF;
+    }
+    .btn:hover {
+      color: #000000;
+      background-color: #04c3ee;
+      border-color: #5b288e;
+    }
+    .carousel-inner img {
+      width: 100%; /* Set width to 100% */
+      margin: auto;
+      min-height:200px;
+      max-height:300px; 
+  }
+
+  .carousel-caption {
+    top: 50%;
+    transform: translateY(-50%);  
+  }
+
+  /* Hide the carousel text when the screen is less than 600 pixels wide */
+  @media (max-width: 600px) {
+    .carousel-caption {
+      display: none; 
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li ><a href="/">Home</a></li>
+          <li class="active"><a href="/options">View Covid data</a></li>
+          <li><a href="/safety_measures">Safety measures</a></li>
+          <li><a href="/vaccination">Vaccination</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <a href="/options" target="_blank">
+        <img src="/static/blue-bkgd.jpg" alt="Image">
+        <div class="carousel-caption">
+          <h1>Covid-19 daily data</h1>
+        </div>   
+      </a>   
+      </div>
+
+      <div class="item">
+        <a href="/safety_measures" target="_blank">
+        <img src="/static/deep-blue.jpg" alt="Image">
+        <div class="carousel-caption">
+          <h1>Covid-19 safety measures</h1>
+        </div>      
+        </a>
+      </div>
+
+      <div class="item">
+        <a href="/vaccination" target="_blank">
+        <img src="/static/light-blue.jpg" alt="Image">
+        <div class="carousel-caption">
+          <h1>Covid-19 vaccination</h1>
+        </div> 
+        </a>     
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+</div>  
+<div class="container text-center">    
+  <h3>Select an option below.</h3><br>
+  <form>
+  <div class="row">
+    <div class="col-sm-4">
+      <button formaction="/get_prediction_input_data" class="btn btn-info btn-lg btn-block" target="_blank">Predict Covid-19 data</button> 
+      <br><p class="column-container">Visit this space for modelling and predicting Covid-19 number of cases, using Machine Learning techniques 
+        such as Linear regression, Polynomial regression, Support Vector regression, Random Forest regression and Multi Layer Perceptron. Here 
+        you can enter the number of days for which you want to model and predict the number of Covid-19 cases. After that you will be able to 
+        view the prediction accuracy of each machine learning algorithm and also view the graph of actual data vs predicted data plotted for the 
+        chosen number of days.</p>
+    </div>
+    <div class="col-sm-4"> 
+      <button formaction="/get_statewise_input_data" class="btn btn-info btn-lg btn-block" target="_blank">View statewise data</button>   
+      <br><p class="column-container">Visit this space for viewing existing Covid-19 data for different states in India. You have to select 
+        the state for which you want to view the data, you have to also select the number of days for which you want to view the data. Then 
+        the confirmed number of Covid-19 cases, number of active cases, number of recovered cases and number of mortality cases for the chosen 
+        state for the chosen number of days will be displayed to you. This data will be displayed to you in a tabular form. You can also chose to 
+        view graphical representation of the same.</p>
+    </div>
+    <div class="col-sm-4">
+      <button formaction="/get_country_input_data" class="btn btn-info btn-lg btn-block" target="_blank">View country data</button> 
+      <br><p class="column-container">Visit this space for viewing existing Covid-19 data of all states in India. You have to select the date 
+        for which you want to view the data.Then the confirmed number of Covid-19 cases, number of active cases, number of recovered cases and 
+        number of mortality cases for the chosen number of days for all states in India will be displayed to you. This data will be displayed 
+        to you in a tabular form. You can also chose to view graphical representation of the same.</p>  
+    </div>
+    </div>
+  </div>
+  </form>
+</div><br>
+
+<footer class="container-fluid text-center">
+    <p ><a href="/" style="color:#000099" ><b>Return to home page</b></p>
+</footer>
+
+</body>
+</html>

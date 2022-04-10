@@ -1,19 +1,50 @@
+<!--html>
+    <body>
+        <div>
+            <img src=data:image/png;base64,{{images.image_1}}>
+        </div>
+        <div>
+            <img src=data:image/png;base64,{{images.image_2}}>
+        </div>
+        <div>
+            <img src=data:image/png;base64,{{images.image_3}}>
+        </div>
+    </body>
+</html-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Home</title>
+  <title>Options</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <style>
-
+    
     .navbar {
       margin-bottom: 0;
       border-radius: 0;
     }
-  .carousel-inner img {
+    .column-container {
+      font-size: 15px; 
+      text-align: justify;
+      color: #000033;
+      background-color: #99CCFF; 
+      padding: 30px;
+      height : 350px;
+      }
+    .btn {
+      background-color : #000099;
+      color : #CCFFFF;
+    }
+    .btn:hover {
+      color: #000000;
+      background-color: #04c3ee;
+      border-color: #5b288e;
+    }
+    .carousel-inner img {
       width: 100%; /* Set width to 100% */
       margin: auto;
       min-height:200px;
@@ -30,7 +61,6 @@
     .carousel-caption {
       display: none; 
     }
-  }
   </style>
 </head>
 <body>
@@ -38,16 +68,15 @@
     <div class="container-fluid">
         <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav">
-          <li class="active"><a href="#">Home</a></li>
-          <li><a href="/options">View Covid data</a></li>
+          <li ><a href="/">Home</a></li>
+          <li class="active"><a href="/options">View Covid data</a></li>
           <li><a href="/safety_measures">Safety measures</a></li>
           <li><a href="/vaccination">Vaccination</a></li>
         </ul>
       </div>
     </div>
   </nav>
-  
-<div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
     <ol class="carousel-indicators">
       <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -94,17 +123,13 @@
       <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
       <span class="sr-only">Next</span>
     </a>
-</div>
-<div class="container text-justify">
-    <h1>Coronavirus</h1>      
-    <p style="font-size: 17px">Coronavirus disease (COVID-19) is an infectious disease caused by the SARS-CoV-2 virus.
+    </div>  
+        <div class="row">
+            <img src="data:image/png;base64,{{images.image}}" class="center-image">
+        </div>
 
-      Most people infected with the virus will experience mild to moderate respiratory illness and recover without requiring special treatment. However, some will become seriously ill and require medical attention. Older people and those with underlying medical conditions like cardiovascular disease, diabetes, chronic respiratory disease, or cancer are more likely to develop serious illness. Anyone can get sick with COVID-19 and become seriously ill or die at any age. 
-      
-      The best way to prevent and slow down transmission is to be well informed about the disease and how the virus spreads. Protect yourself and others from infection by staying at least 1 metre apart from others, wearing a properly fitted mask, and washing your hands or using an alcohol-based rub frequently. Get vaccinated when it’s your turn and follow local guidance.
-      
-      The virus can spread from an infected person’s mouth or nose in small liquid particles when they cough, sneeze, speak, sing or breathe. These particles range from larger respiratory droplets to smaller aerosols. It is important to practice respiratory etiquette, for example by coughing into a flexed elbow, and to stay home and self-isolate until you recover if you feel unwell.</p>
-</div>
-
-</body>
+        <footer class="container-fluid text-center">
+            <p ><a href="/" style="color:#000099" ><b>Return to home page</b></p>
+        </footer>
+    </body>
 </html>

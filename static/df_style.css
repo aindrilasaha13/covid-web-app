@@ -1,0 +1,51 @@
+.mystyle {
+  font-size: 11pt; 
+  font-family: Arial;
+  border-collapse: collapse; 
+  border: 1px solid silver;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.mystyle td, th {
+  padding: 5px;
+}
+
+.mystyle tr:nth-child(even) {
+  background: #E0E0E0;
+}
+
+.mystyle tr:hover {
+  background: silver;
+  cursor: pointer;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.column {
+  float: left;
+  width: 45%;
+  padding: 2px;
+}
+
+/* Clear floats after image containers */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.center-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 50%;
+  width: 80%;
+}

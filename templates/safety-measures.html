@@ -43,48 +43,29 @@
   .nav-item{
     color:#000066;font-size:25px;font-family: 'Times New Roman', serif;
   }
-  .site-update {
-    background-color: #eef3f7;
-    padding: 0px 0 10px;
-    position: relative; }
-    .site-update:before {
-      content: "";
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-      bottom: 0;
-      background-color: #d7d7d7;
-      width: 1140px;
-      height: 1px; }
-    .site-update .update-box {
-      width: 100%;height:160px;
-      box-shadow: 0 0 4px rgba(0, 0, 0, 0.45);
-      border-radius: 4px;
-      background-color: #fff;
-      padding: 18px;
-      margin: 0 0 30px;
-      -webkit-transition: all 0.5s ease;
-      transition: all 0.5s ease; }
-      .site-update .update-box p {
-        overflow: hidden;
-        line-height: 20px; }
-        .site-update .update-box p a {
-          float: left;
-          display: block;
-          width: calc(100% - 85px);
-          color: #000; }
-        .site-update .update-box p strong {
-          width: 85px;
-          float: left;
-          display: block;
-          color: #0f70ce; }
-      .site-update .update-box:hover {
-        background-color: #0f70ce; }
-        .site-update .update-box:hover a {
-          color: #fff;
-          text-decoration: underline; }
-        .site-update .update-box:hover strong {
-          color: #f5d92f; }
+  
+  .site-update .update-box {
+    width: 100%;
+    height:145px;
+    border-radius: 6px;
+    background-color: #000066;
+    padding: 20px;
+    margin: 0 0 30px;
+    text-align: justify;  
+  }
+
+  .site-update .update-box a {
+    #float: left;
+    #display: block;
+    color: white; }
+
+    .site-update .update-box:hover {
+      background-color: powderblue; }
+
+    .site-update .update-box:hover a {
+      color: black;
+      text-decoration: underline; }
+
   </style>
 </head>
 <body>
@@ -159,58 +140,48 @@
     <div class="row">
       <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12"> 
             <div class="update-box">
-            <p><strong>{{date}}</strong>
               <a href="https://www.mohfw.gov.in/pdf/GuidelinesCovidvaccination12to14yrchildrenMarch2022.pdf">
               Guidelines for Covid-19 vaccination of children between 12-14 years of age</a>
-            </p>
             </div>
         </div>
         <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12"> 
             <div class="update-box">
-            <p><strong>{{date}}</strong>
             <a href="https://www.mohfw.gov.in/pdf/ListofCountriesRegionsinrespectofwhichprimaryvaccinationschedulecompletioncertificateisallowedtobeuploadedincontextofguidelinesforinternationalarrivalsupdatedon28thFebruary2022.pdf">
             List of Countries/Regions in respect of which primary vaccination schedule completion certificate is allowed to be uploaded (in context of guidelines for international arrivals updated on 10th February 2022)</a>
-            </p>
             </div>
         </div>
         <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12"> 
             <div class="update-box">
-            <p><strong>{{date}}</strong>
             <a href="https://www.mohfw.gov.in/pdf/GuidelinesforInternationalarrivalsupdatedon10thFebruary2022.pdf">
             Guidelines for International arrivals (updated on 10th February 2022)</a>
-            </p>
             </div>
         </div>
       </div>
       <div class="row">
         <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12"> 
             <div class="update-box">
-            <p><strong>{{date}}</strong>
             <a href="https://www.mohfw.gov.in/pdf/GuidelinesforDeliveryofMentalMentalHealthcareServicesduringtheCOVID19.pdf">
             Guidelines on Managing Mental Illness in Hospital Settings during COVID-19</a>
-            </p>
             </div>
         </div>
         <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12"> 
           <div class="update-box">
-          <p><strong>{{date}}</strong>
           <a href="https://www.mohfw.gov.in/pdf/COVID19ManagementAlgorithm22042021v1.pdf">
             Clinical Guidance for Management of Adult Covid-19 Patients</a>
-          </p>
           </div>
       </div>
         <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12"> 
             <div class="update-box">
-            <p><strong>{{date}}</strong>
               <a href="https://www.mohfw.gov.in/pdf/ClinicalGuidanceforManagementofAdultCovid19Patientsupdatedason17thJanuary2022.pdf">
                 Clinical Guidance for Management of Adult Covid-19 Patients (updated as on 17th January 2022) 
               </a>
-            </p>
             </div>
         </div>
     </div>
   </div><br><br>
 </section>
-
+<footer class="container-fluid text-center">
+  <p ><a href="/" style="color:#000099" ><b>Return to home page</b></p>
+</footer>
 </body>
 </html>

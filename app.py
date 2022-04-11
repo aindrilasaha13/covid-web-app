@@ -36,7 +36,7 @@ def display_state_data():
     state=request.form.get("state")
     days=int(request.form.get("days"))
     
-    df = pd.read_csv(r"datasets\COVID-19 Cases statewise.csv",parse_dates=True)
+    df = pd.read_csv(r"datasets/COVID-19 Cases statewise.csv",parse_dates=True)
     df1 = df.copy()
     df1.drop("S. No.",axis=1,inplace=True)
     df1 = df1.drop(df1[df1.Region == "India"].index)

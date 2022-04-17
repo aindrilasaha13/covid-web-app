@@ -1,3 +1,4 @@
+import json
 from flask import Flask, render_template, request
 from datetime import datetime
 import pandas as pd, numpy as np
@@ -437,6 +438,34 @@ def safety_measures():
 @app.get("/vaccination")
 def vaccination():
     return render_template("vaccination.html")
+
+# vaccination html page contents' apis:-
+@app.get("/vaccination_item1")
+def vaccination_item1():
+    return json.dumps("Children of the age group 12-14 yrs are now eligible for the Corbevax vaccine. The time span between a first and second dose of Corbevax is 28 days. Covaxin is available for Children of the age group of 15-18 yrs. Children must be completed 4 to 6 weeks after administration of the first dose of Covaxin to take the second dose of Covaxin. Both online and walk-in are available.")
+
+@app.get("/vaccination_item2")
+def vaccination_item2():
+    return json.dumps("10 vaccines are approved for use in India. Find out the names of the vaccines on the given link: <a href=\"https://covid19.trackvaccines.org/country/india\"\>https://covid19.trackvaccines.org/country/india</a>")
+
+@app.get("/vaccination_item3")
+def vaccination_item3():
+    return json.dumps("All fully vaccinated adult citizens (18+ and have taken 2 doses) are eligible for precaution dose from 10/04/2022. Eligible citizens can avail precaution dose at any Private Vaccination Center. Citizens should carry their Final Certificate of vaccination (with details of both earlier doses). Citizens should use the same mobile number and ID card used for earlier doses"
+
+              "HCWs, FLWs and Citizens aged 60 year or more, shall continue to receive precaution dose vaccination at any CVC, including free of charge vaccination at Government Vaccination Centers.")
+
+@app.get("/vaccination_item4")
+def vaccination_item4():
+    return json.dumps("Those who have received the second and final dose of vaccination can now download the second dose vaccination certificate using their Aadhar certificate and mobile phone number. You can download Cowin Vaccination Certificate by the following methods: <ul><li>DigiLocker App</li> <li>Arogya Setu App</li><li>Umang App</li><li>Cowin Portal</li></ul>")
+
+@app.get("/vaccination_item5")
+def vaccination_item5():
+    return json.dumps("According to WHO, you should not get vaccinated if you have a history of severe allergic reactions/anaphylaxis to any of the ingredients of the COVID-19 vaccine, or if you have an allergic reaction to your first dose. In most cases, minor side effects are normal.")
+
+@app.get("/vaccination_item6")
+def vaccination_item6():
+    return json.dumps("Common side effects after vaccination, which indicate that a person's body is building protection to COVID-19 infection include: <ul><li>Arm soreness</li><li>Mild fever</li><li>Tiredness</li><li>Headaches</li><li>Muscle or joint aches</li></ul>Most side effects go away within a few days on their own.More serious or long-lasting side effects to COVID-19 vaccines are possible but extremely rare. For such cases, contact your healthcare provider immediately.")
+
 
 if __name__ == "__main__":
     app.run(debug=True)

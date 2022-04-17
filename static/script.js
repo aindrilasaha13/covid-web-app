@@ -1,12 +1,19 @@
 // api url
-const api_url = [
-	"http://127.0.0.1:5000/vaccination_item1",
-	"http://127.0.0.1:5000/vaccination_item2", 
-	"http://127.0.0.1:5000/vaccination_item3",
-	"http://127.0.0.1:5000/vaccination_item4",
-	"http://127.0.0.1:5000/vaccination_item5",
-	"http://127.0.0.1:5000/vaccination_item6"];
+// const api_url = [
+// 	"http://127.0.0.1:5000/vaccination_item1",
+// 	"http://127.0.0.1:5000/vaccination_item2", 
+// 	"http://127.0.0.1:5000/vaccination_item3",
+// 	"http://127.0.0.1:5000/vaccination_item4",
+// 	"http://127.0.0.1:5000/vaccination_item5",
+// 	"http://127.0.0.1:5000/vaccination_item6"];
 
+	const api_url = [
+	"https://python-tested-app.herokuapp.com/vaccination_item1",
+	"https://python-tested-app.herokuapp.com/vaccination_item2",
+	"https://python-tested-app.herokuapp.com/vaccination_item3",
+	"https://python-tested-app.herokuapp.com/vaccination_item4",
+	"https://python-tested-app.herokuapp.com/vaccination_item5",
+	"https://python-tested-app.herokuapp.com/vaccination_item6"];
 // Defining async function
 async function getapi(url) {
 	
